@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mưa đỏ - Trailer</title>
+    <script src="script2.js"></script>
+    <style>
+      body {
+        background-color: #131314;
+        color: white;
+        text-align: center;
+      }
+
+      .banner {
+        width: 70%;
+        height: 400px;
+        margin: 20px auto;
+        background-image: url("640x396-muado.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+      }
+
+      .banner iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .xemngay {
+        background-color: orangered;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="banner" id="banner"></div>
+    <button class="xemngay" onclick="xemTrailer()">Xem ngay</button>
+
+    <script>
+      let isPlaying = false;
+
+      function xemTrailer() {
+        const banner = document.getElementById("banner");
+
+        if (!isPlaying) {
+          banner.style.backgroundImage = "none";
+          banner.innerHTML = `
+            <iframe 
+              src="https://www.youtube.com/embed/BD6PoZJdt_M?si=x0gIxB4jJuUsVsYG&autoplay=1&mute=1"
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+          `;
+        } else {
+          banner.innerHTML = "";
+          banner.style.backgroundImage = "url('640x396-muado.jpg')";
+        }
+
+        isPlaying = !isPlaying;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let movies = ["Inception", "Avatar", "Titanic", "Interstellar", "The Dark Knight"];
+      //   document.writeln(movies.length);
+      //   document.writeln("<br>" + movies[0] + " "+ movies[movies.length - 1])
+      add1 = movies.unshift("Dune");
+      add2 = movies.push("Oppenheimer");
+      document.writeln("<br>" + movies);
+      delete1 = movies.shift();
+      delete2 = movies.pop();
+      document.writeln("<br>" + movies + "<br>");
+
+      let rating = 5;
+      if (rating < 5) {
+        document.writeln("Phim dở");
+      } else if (rating >= 5 && rating < 8) {
+        document.writeln("Phim bình thường");
+      } else {
+        document.writeln("Phim hay");
+      }
+
+      let review = "Movies make life more interesting";
+      document.writeln(review.length);
+      document.writeln("<br>" + review.toLowerCase);
+      document.writeln("<br>" + review.toUpperCase);
+      document.writeln("<br>" + review.split(" "))
+      document.writeln("<br>" + review.includes("life"))
+
+      let actor = ["Leonardo", "Tom hardy", "Anne Hathaway"];
+      document.writeln("<br>" + actor.join(" - "))
+      
+    </script>
+  </body>
+</html>

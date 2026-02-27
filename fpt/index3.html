@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xem phim trực tuyến</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        background-color: #131314;
+        color: white;
+        font-family: "SFProDisplay", "Times New Roman", Times, serif;
+      }
+
+      header {
+        background-color: black;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        width: 70%;
+        margin: auto;
+      }
+
+      .danhmuc {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 0;
+      }
+
+      .logo {
+        width: 15%;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        gap: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #9b9b9b;
+        font-size: 16px;
+      }
+
+      a:hover {
+        color: orange;
+      }
+
+      .chucnang {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .muagoi,
+      .dangnhap {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .muagoi {
+        background-color: orangered;
+        color: white;
+      }
+
+      .muagoi:hover {
+        background-color: orange;
+      }
+
+      .dangnhap {
+        background-color: black;
+        color: white;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      .quangcao {
+        position: relative;
+        display: inline-block;
+      }
+
+      .quangcao {
+        display: flex;
+        justify-content: center;
+        margin-left: 10px;
+      }
+
+      .qc {
+        margin-top: 10px;
+        width: 98%;
+        border-radius: 10px;
+      }
+
+      .container {
+        width: 70%;
+        background-color: black;
+        margin: auto;
+        padding-bottom: 20px;
+      }
+
+      .banner {
+        width: 98%;
+        height: 400px;
+        margin: 20px auto;
+        background-image: url(".//img/640x396-muado.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        position: relative;
+      }
+
+      .trailer {
+        width: 98%;
+        height: 400px;
+        margin: 20px auto;
+        display: none;
+      }
+
+      .xemngay {
+        position: absolute;
+        left: 40px;
+        bottom: 25px;
+        background-color: orangered;
+        border: none;
+        color: white;
+        padding: 12px 26px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .xemngay:hover {
+        background-color: #ff7b00;
+      }
+
+      .thongtinphim {
+        position: absolute;
+        left: 40px;
+        bottom: 80px;
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        text-shadow: 1px 1px 3px black;
+      }
+
+      .danhsach {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .phim {
+        width: 19%;
+        text-align: center;
+      }
+
+      .phim img {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .container2 {
+        width: 70%;
+        background-color: #131314;
+        margin: auto;
+        display: flex;
+        font-size: 15px;
+        margin-top: 10px;
+        border-top: 1px solid rgb(247, 244, 244);
+      }
+
+      .footer-trai {
+        width: 20%;
+        margin-top: 15px;
+      }
+
+      .anh1 {
+        width: 50%;
+      }
+
+      .noidungfooter1 {
+        color: white;
+        width: 20%;
+      }
+
+      .noidungfooter1 ul {
+        flex-direction: column;
+      }
+
+      .noidungfooter1 a {
+        font-size: 12px;
+        line-height: 0.5;
+      }
+
+      .footer-duoi {
+        width: 70%;
+        margin: auto;
+        border-top: 1px solid white;
+      }
+
+      .noidung-duoi {
+        color: #d2d2d2;
+        font-size: 13px;
+        margin-top: 20px;
+      }
+
+      .noidung-duoi p {
+        margin: 0;
+        font-family: "SFProDisplay", Arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        <nav class="danhmuc">
+          <img class="logo" src="../fpt ( theend)/img/footer1.png" alt="" />
+          <ul class="danhmuc-danhsach">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Truyền hình</a></li>
+            <li><a href="#">Phim bộ</a></li>
+            <li><a href="#">V.League</a></li>
+            <li><a href="#">Thiếu nhi</a></li>
+            <li><a href="#">Xem thêm</a></li>
+          </ul>
+        </nav>
+        <div class="chucnang">
+          <button class="muagoi">Mua gói</button>
+          <button class="dangnhap">Đăng nhập</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="quangcao">
+        <img
+          style="width: 69.3%"
+          src="..//fpt ( theend)/img/09_68bfea5810013f0001205210.jpg"
+          alt=""
+        />
+      </div>
+      <div class="container">
+        <div class="banner">
+          <div class="thongtinphim" id="thongTinPhim"></div>
+          <button class="xemngay" onclick="viewTrailer()">Xem ngay</button>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <img class="qc" src="../fpt ( theend)/img/qc.jpg" alt="" />
+        </div>
+
+        <div class="trailer">
+          <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="theloai">
+          <h2 style="margin-left: 20px">Phim hoạt hình</h2>
+          <div class="danhsach">
+            <div class="phim">
+              <img
+                src="../fpt ( theend)/img/vutru.png"
+                onclick="chooseFilm(1)"
+              />
+              <h3>Vũ trụ sáng tạo</h3>
+            </div>
+            <div class="phim">
+              <img
+                src="../fpt ( theend)/img/Tiktak.png"
+                onclick="chooseFilm(2)"
+              />
+              <h3>Tik Tak</h3>
+            </div>
+            <div class="phim">
+              <img
+                src="../fpt ( theend)/img/quaivat.png"
+                onclick="chooseFilm(3)"
+              />
+              <h3>Quái vật đáng yêu</h3>
+            </div>
+            <div class="phim">
+              <img
+                src="../fpt ( theend)/img/robot.png"
+                onclick="chooseFilm(4)"
+              />
+              <h3>Cậu bé Ro-bot</h3>
+            </div>
+            <div class="phim">
+              <img
+                src="../fpt ( theend)/img/pokemon.png"
+                onclick="chooseFilm(5)"
+              />
+              <h3>pokemon</h3>
+            </div>
+          </div>
+        </div>
+        <div class="theloai">
+          <h2 style="margin-left: 20px">Phim thực tế</h2>
+          <div class="danhsach">
+            <div class="phim">
+              <img src="../fpt ( theend)/img/run.jpeg" />
+              <h3>Running man</h3>
+            </div>
+            <div class="phim">
+              <img src="../fpt ( theend)/img/run.jpeg" />
+              <h3>Running man</h3>
+            </div>
+            <div class="phim">
+              <img src="../fpt ( theend)/img/run.jpeg" />
+              <h3>Running man</h3>
+            </div>
+            <div class="phim">
+              <img src="../fpt ( theend)/img/run.jpeg" />
+              <h3>Running man</h3>
+            </div>
+            <div class="phim">
+              <img src="../fpt ( theend)/img/run.jpeg" />
+              <h3>Running man</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container2">
+        <div class="footer-trai">
+          <div class="anh1">
+            <img src=".//img/footer1.png" />
+            <img style="width: 100%" src=".//img/footer2.png" />
+            <img src=".//img/footer3.png" />
+          </div>
+        </div>
+        <div class="noidungfooter1">
+          <ul>
+            <li>Về FPT Play</li>
+            <a href="#"><li>Giới thiệu</li></a>
+            <a href="#"><li>Các gói dịch vụ</li></a>
+            <a href="#"><li>Liên hệ</li></a>
+            <a href="#"><li>Trung tâm hỗ trợ</li></a>
+            <a href="#"><li>Thông tin</li></a>
+          </ul>
+        </div>
+        <div class="noidungfooter1">
+          <ul>
+            <li>Dịch vụ</li>
+            <a href=""><li>Gói Data</li></a>
+            <a href="#"><li>Quảng cáo</li></a>
+            <a href="#"><li>Mua gói</li></a>
+            <a href="#"><li>Bảo hành</li></a>
+          </ul>
+        </div>
+        <div class="noidungfooter1">
+          <ul>
+            <li>Quy định</li>
+            <a href="#"><li>Điều khoản sử dụng</li></a>
+            <a href="#"><li>Chính sách thanh toán</li></a>
+            <a href="#"><li>Chính sách bảo mật thông tin dữ liệu</li></a>
+            <a href="#"><li>Cam kết của FPT Telecom</li></a>
+          </ul>
+        </div>
+        <div class="noidungfooter1">
+          <ul>
+            <li>
+              <i style="margin-right: 5px" class="fa-solid fa-phone"></i>
+              19006600
+            </li>
+            <li>
+              <i style="margin-right: 5px" class="fa-solid fa-envelope"></i>
+              hotrofptplay@fpt.com
+            </li>
+            <li>
+              Theo dõi chúng tôi trên <br />
+              <br />
+              <a href="#"
+                ><i style="margin-right: 15px" class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-duoi">
+        <div class="noidung-duoi">
+          <p>
+            Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt Anh.
+            Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy, Số 17 Phố Duy Tân, Phường Dịch
+            Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội
+          </p>
+          <p>
+            Địa chỉ liên lạc: Tầng 9, Block A, tòa nhà FPT Cầu Giấy, số 10 Phạm
+            Văn Bạch, quận Cầu Giấy, TP. Hà Nội
+          </p>
+          <p>
+            Số điện thoại liên hệ: 024 7300 2222. Thư điện tử:
+            hotrokhachhang@fpt.com hoặc hotrofptplay@fpt.com
+          </p>
+          <br />
+          <p>
+            Giấy chứng nhận đăng ký doanh nghiệp số 0101778163 do Sở Kế hoạch và
+            Đầu tư Thành phố Hà Nội cấp lần đầu ngày 28/7/2005, cấp đăng ký thay
+            đổi lần thứ 32 vào ngày 21/12/2023
+          </p>
+          <p>
+            Giấy phép cung cấp dịch vụ phát thanh, truyền hình trả tiền số
+            377/GP-BTTTT cấp sửa đổi bổ sung lần 1 ngày 10/10/2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let danhSachPhim = [
+        {
+          id: 1,
+          tenPhim: "Vũ trụ sáng tạo",
+          loaiPhim: "Phim hoạt hình",
+          banner: ".//img/vutru-ngang.webp",
+          trailer: "https://www.youtube.com/embed/MjSgwOV6ek0",
+          namXuatBan: "2019",
+          tuoi: "T10",
+          soTap: "20/20 tập",
+          quocGia: "Phần Lan",
+        },
+        {
+          id: 2,
+          tenPhim: "Tik tak",
+          loaiPhim: "Phim hoạt hình",
+          banner: ".//img/tiktak-ngang.webp",
+          trailer: "https://www.youtube.com/embed/EvqT_N14jiY",
+          namXuatBan: "2017",
+          tuoi: "T12",
+          soTap: "186/186 tập",
+          quocGia: "Ấn Độ",
+        },
+        {
+          id: 3,
+          tenPhim: "Quái vật đáng yêu",
+          loaiPhim: "Phim hoạt hình",
+          banner: ".//img/quaivat-ngang.webp",
+          trailer: "https://www.youtube.com/embed/o_07CcFAk-A",
+          namXuatBan: "2020",
+          tuoi: "T11",
+          soTap: "54/54 tập",
+          quocGia: "Anh",
+        },
+        {
+          id: 4,
+          tenPhim: "Cậu bé Ro-bot",
+          loaiPhim: "Phim hoạt hình",
+          banner: ".//img/robot-ngang.webp",
+          trailer: "https://www.youtube.com/embed/K2T-WzZwDDw",
+          namXuatBan: "2013",
+          tuoi: "T09",
+          soTap: "78/78 tập",
+          quocGia: "Ấn Độ",
+        },
+        {
+          id: 5,
+          tenPhim: "Pokemon",
+          loaiPhim: "Phim hoạt hình",
+          banner: ".//img/pokemon-ngang.webp",
+          trailer: "https://www.youtube.com/embed/pi-nXvliHSQ",
+          namXuatBan: "2021",
+          tuoi: "T15",
+          soTap: "16/16 tập",
+          quocGia: "Nhật Bản",
+        },
+      ];
+
+      let bannerElement = document.getElementsByClassName("banner")[0];
+      let trailerElement = document.getElementsByClassName("trailer")[0];
+      let iframe = trailerElement.querySelector("iframe");
+      let thongTinPhim = document.getElementById("thongTinPhim");
+
+      let phimHienTai = danhSachPhim[0];
+
+      function viewTrailer() {
+        bannerElement.style.display = "none";
+        trailerElement.style.display = "block";
+        iframe.src = phimHienTai.trailer;
+      }
+
+      function chooseFilm(filmId) {
+        let selectedFilm = danhSachPhim.find((film) => film.id === filmId);
+        bannerElement.style.backgroundImage =
+          "url('" + selectedFilm.banner + "')";
+        thongTinPhim.innerText =
+          selectedFilm.namXuatBan +
+          " · " +
+          selectedFilm.tuoi +
+          " . " +
+          selectedFilm.soTap +
+          " · " +
+          selectedFilm.quocGia;
+        phimHienTai = selectedFilm;
+        bannerElement.style.display = "block";
+        trailerElement.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

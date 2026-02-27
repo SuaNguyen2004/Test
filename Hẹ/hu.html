@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = "JavaScript rat hay va huu ich";
+      document.writeln(text.indexOf("a"));
+      document.writeln(text.startsWith("Java"));
+      document.writeln("<br>" + text.split(""));
+      document.writeln("<br>" + text[5]);
+
+      let so = "123.45";
+      document.writeln("<br>" + typeof so);
+      document.writeln("<br>" + parseInt(so));
+      document.writeln("<br>" + parseFloat(so));
+      document.writeln("<br>" + typeof Number(so));
+      document.writeln("<br>" + isNaN("abc"));
+      document.writeln("<br>" + isFinite(10 / 0));
+
+      let a = 10,
+        b = "10";
+      document.writeln("<br>" + (a == b));
+      document.writeln("<br>" + (a === b));
+      document.writeln("<br>" + (a != b));
+      document.writeln("<br>" + (a !== b));
+      document.writeln("<br>" + (a > 5 && b < 20));
+
+      let x = 5;
+      document.writeln("<br>" + x++);
+      document.writeln("<br>" + x);
+      document.writeln("<br>" + ++x);
+
+      document.writeln("<br>" + x * 2);
+      document.writeln("<br>" + x / 2);
+      document.writeln("<br>" + (x % 2));
+
+      let dangKyHoc = {
+        maDangKy: "DK2025",
+        thongTinHocVien: {
+          hoTen: "Tien Cafe",
+          soDienThoai: 113,
+          trangThaiHoiVien: true,
+        },
+        danhSachKhoaHoc: {
+          Web: {
+            ma: 1,
+            soBuoiHoc: 15,
+            hocPhi1Buoi: 50000,
+          },
+          CSANM: {
+            ma: 2,
+            soBuoiHoc: 20,
+            hocPhi1Buoi: 40000,
+          },
+        },
+        trangThaiThanhToan: false,
+        diaChi: "Phu Quoc",
+      };
+
+      tongKhoa1 =
+        dangKyHoc.danhSachKhoaHoc.Web.soBuoiHoc * dangKyHoc.danhSachKhoaHoc.Web.hocPhi1Buoi;
+      tongKhoa2 =
+        dangKyHoc.danhSachKhoaHoc.CSANM.soBuoiHoc * dangKyHoc.danhSachKhoaHoc.CSANM.hocPhi1Buoi;
+      document.writeln("<br>" + tongKhoa1 + " " + tongKhoa2);
+      document.writeln("<br> Tổng học phí của cháu là:" + (tongKhoa1 + tongKhoa2));
+      document.writeln(
+        "<br> Tổng học phí của cháu nếu là hội viên Vip: " +
+          (tongKhoa1 + tongKhoa2 - ((tongKhoa1 + tongKhoa2) * 5) / 100)
+      );
+      document.writeln(
+        "<br> Học viên " +
+          dangKyHoc.thongTinHocVien.hoTen +
+          " đã đăng ký mã " +
+          dangKyHoc.maDangKy +
+          " với tổng học phí " +
+          (tongKhoa1 + tongKhoa2 - ((tongKhoa1 + tongKhoa2) * 5) / 100) +
+          " tại trung tâm " +
+          dangKyHoc.diaChi
+      );
+      
+    </script>
+  </body>
+</html>

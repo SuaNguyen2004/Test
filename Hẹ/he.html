@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài JavaScript</title>
+    <!-- <script src="script.js"></script> -->
+    <!-- liên kết sang file .js -->
+  </head>
+  <body>
+    <script>
+      let donHang = {
+        maDonHang: "01",
+        thongTinKhachHang: {
+          hoTen: "Nguyen Van Sú",
+          soDienThoai: 123,
+          email: "He@gmai.com",
+          khachHangThanThiet: true,
+        },
+        sanPham: {
+          sp1: {
+            ma: 10,
+            ten: "cam",
+            soLuong: 10,
+            gia: 8000,
+          },
+          sp2: {
+            ma: 11,
+            ten: "quýt",
+            soLuong: 20,
+            gia: 4000,
+          },
+          sp3: {
+            ma: 12,
+            ten: "mít",
+            soLuong: 5,
+            gia: 20000,
+          },
+        },
+        diaChi: "Hải Phòng",
+        trangThaiThanhToan: true,
+      };
+
+      var tongTienSp1 = donHang.sanPham.sp1.soLuong * donHang.sanPham.sp1.gia;
+      var tongTienSp2 = donHang.sanPham.sp2.soLuong * donHang.sanPham.sp2.gia;
+      var tongTienSp3 = donHang.sanPham.sp3.soLuong * donHang.sanPham.sp3.gia;
+      var tongTien =
+        tongTienSp1 +
+        tongTienSp2 +
+        tongTienSp3 -
+        ((tongTienSp1 + tongTienSp2 + tongTienSp3) * 10) / 100;
+      document.writeln("Tổng tiền phải trả:" + tongTien);
+
+      document.writeln(
+        "<br> Khách hàng có tên: " +
+          donHang.thongTinKhachHang.hoTen +
+          "  có số điện thoại: " +
+          donHang.thongTinKhachHang.soDienThoai +
+          " Phải trả cho chúng tôi số tiền: " +
+          tongTien +
+          " VNĐ <br>"
+      );
+      let cauNoi = "Hoc lap trinh voi JavaScript rat thu vi";
+      document.writeln(cauNoi[5]);
+      document.writeln(cauNoi.slice(0, 10));
+      document.writeln(cauNoi.replace("JavaScript", "JS") + "<br>");
+      document.writeln(cauNoi.toUpperCase() + "<br>" + cauNoi.toLowerCase());
+      document.writeln("<br>" + cauNoi.indexOf("i"));
+      document.writeln(cauNoi.includes("lap trinh"));
+      document.writeln("<br>" + cauNoi.split(""));
+
+      let sinhVien = ["An", "Binh", "Cuong", "Dung"];
+
+      document.writeln(sinhVien[0] + sinhVien[3]);
+
+      let num = 15.678;
+      document.writeln(parseInt(num));
+      document.writeln(parseFloat(num));
+      document.writeln(num.toFixed(2));
+
+      document.writeln(isNaN("abc"));
+      document.writeln(isFinite(10 / 0));
+
+      let homNay = new Date();
+      // document.writeln(homNay);
+
+      document.writeln(
+        "<br>" + homNay.getDate() + "<br>" + homNay.getMonth() + "<br>" + homNay.getFullYear()
+      );
+      // document.writeln( + homNay.getDate()  + homNay.getMonth() + homNay.getFullYear())
+      document.writeln(
+        "<br>" + homNay.getHours() + "<br>" + homNay.getMinutes() + "<br>" + homNay.getSeconds()
+      );
+      let ngay = new Date(2024, 11, 25, 10, 30);
+      document.writeln("<br>" + ngay);
+      
+    </script>
+  </body>
+</html>

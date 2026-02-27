@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.writeln("Chào bố mày cái! <br>" + "con chào bố <br>");
+      let boMay = "Bo day ";
+      var cham = "Bo đâu";
+
+      document.writeln(boMay + cham);
+
+      let so1 = 11;
+      let so2 = 23;
+      let ketQua = so1 + so2;
+
+      document.writeln("<br>" + ketQua);
+
+      let thongTin = {
+        hoTen: "Sue",
+        lop: "12A14",
+        truong: "THPT Thường Tín",
+        tuoi: 18,
+      };
+
+      let diaChiNha = {
+        thanhPho: "Hồi Lạ",
+        huyen: "Thìn Tướng",
+        xa: "Vu Phắn",
+        xom: 2,
+      };
+
+      thongTin.diaChi = diaChiNha;
+
+      document.writeln(
+        "<br> Hú le bạn " +
+          thongTin.hoTen +
+          " " +
+          thongTin.tuoi +
+          " tuổi " +
+          " học trường " +
+          thongTin.truong +
+          " lớp " +
+          thongTin.lop +
+          " nhà ở xóm " +
+          thongTin.diaChi.xom +
+          " " +
+          thongTin.diaChi.xa +
+          " " +
+          thongTin.diaChi.huyen +
+          " " +
+          thongTin.diaChi.thanhPho +
+          " "
+      );
+
+      let namNay = "2022";
+      document.writeln("Bạn " + thongTin.hoTen + " Sinh năm " + (namNay - thongTin.tuoi));
+    </script>
+  </body>
+</html>

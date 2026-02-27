@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let baiHat = "We are the champions my friend";
+      document.writeln(baiHat[0] + " " + baiHat[29]);
+      document.writeln("<br>" + baiHat.indexOf("e"));
+      document.writeln("<br>" + baiHat.indexOf("e"));
+      document.writeln(baiHat.replace("champions", "winners"));
+      document.writeln(baiHat.split(""));
+
+      let diemSo = "99.5";
+      document.writeln("<br>" + parseInt(diemSo));
+      document.writeln("<br>" + parseFloat(diemSo));
+      document.writeln("<br>" + typeof Number(diemSo));
+      document.writeln("<br>" + isNaN("goal"));
+      document.writeln("<br>" + isFinite(500 / 0));
+
+      let tiSo1 = 3,
+        tiSo2 = "3";
+      document.writeln("<br>" + (tiSo1 == tiSo2));
+      document.writeln("<br>" + (tiSo1 === tiSo2) + "<br>");
+      document.writeln(tiSo1++ + "<br>");
+      document.writeln(++tiSo1 + "<br>");
+      if (tiSo1 >= 3 && tiSo1 <= 5) document.writeln("Đội A thắng");
+      else print("Đội B thắng");
+
+      document.writeln("<br>" + tiSo1 * 2);
+      document.writeln("<br>" + tiSo1 / 2);
+      document.writeln("<br>" + (tiSo1 % 2));
+
+      let tranDau = {
+        maTranDau: "TD2025",
+        thongTinDoiBong: {
+          A: {
+            ten: "Hà Nội",
+            soBanThang: 2,
+          },
+          B: {
+            ten: "Hà Nam",
+            soBanThang: 1,
+          },
+        },
+        danhSachGhiBan: {
+          ct1: {
+            ten: "A",
+            doi: "Hà Nội",
+            phut: ["1", "2"],
+          },
+          ct2: {
+            ten: "B",
+            doi: "Hà Nam",
+            phut: 1,
+          },
+        },
+        sanVanDong: "Mỹ Đình",
+        trangThaiKetThuc: true,
+      };
+      document.writeln(
+        "Số bàn thắng của đội " +
+          tranDau.thongTinDoiBong.A.ten +
+          " là " +
+          tranDau.thongTinDoiBong.A.soBanThang +
+          "<br>"
+      );
+      document.writeln(
+        "Số bàn thắng của đội " +
+          tranDau.thongTinDoiBong.B.ten +
+          " là " +
+          tranDau.thongTinDoiBong.B.soBanThang +
+          "<br>"
+      );
+      document.writeln(
+        "cầu thủ tên " +
+          tranDau.danhSachGhiBan.ct1.ten +
+          " ở phút thứ " +
+          tranDau.danhSachGhiBan.ct1.phut
+      );
+      document.writeln(
+        "cầu thủ tên " +
+          tranDau.danhSachGhiBan.ct2.ten +
+          " ở phút thứ " +
+          tranDau.danhSachGhiBan.ct2.phut
+      );
+      document.writeln(
+        "Trận đấu " +
+          tranDau.maTranDau +
+          " tại sân " +
+          tranDau.sanVanDong +
+          " kết thúc với tỷ số " +
+          tranDau.thongTinDoiBong.A.soBanThang +
+          "-" +
+          tranDau.thongTinDoiBong.B.soBanThang
+      );
+    </script>
+  </body>
+</html>

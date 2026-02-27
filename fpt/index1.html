@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đổi ảnh sang video</title>
+    <style>
+      body {
+        text-align: center;
+        transition: background-color 0.4s;
+      }
+      img,
+      iframe {
+        width: 400px;
+        height: 250px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="chedo">Chế độ: Sáng</h2>
+    <img id="hinh" src="images.png" alt="Ảnh minh họa" />
+
+    <br /><br />
+    <button onclick="doiCheDo()">Đổi chế độ & video</button>
+
+    <script>
+      let cheDo = true;
+      let laVideo = false;
+
+      function doiCheDo() {
+        // Đổi nền
+        document.body.style.backgroundColor = cheDo ? "black" : "white";
+        document.body.style.color = cheDo ? "white" : "black";
+        document.getElementById("chedo").innerText = cheDo ? "Chế độ: Tối" : "Chế độ: Sáng";
+        cheDo = !cheDo;
+
+        // Đổi giữa ảnh và video
+        const vungAnh = document.getElementById("hinh");
+        if (!laVideo) {
+          vungAnh.outerHTML = `<iframe id="hinh" width="400" height="250"
+              "src= https://www.youtube.com/embed/BD6PoZJdt_M?si=x0gIxB4jJuUsVsYG"
+              frameborder="0" allowfullscreen></iframe>`;
+          laVideo = true;
+        } else {
+          vungAnh.outerHTML = `<img id="hinh" src="images.png" width="400" height="250" />`;
+          laVideo = false;
+        }
+      }
+    </script>
+  </body>
+</html>
